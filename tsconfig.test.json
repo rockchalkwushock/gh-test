@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+    // We don't want to allow JS files to be imported
+    // since we are writing exclusively in TS.
+    "allowJs": false,
+    // Allows us to do the following:
+    // import * as React from 'react'
+    // import _ from 'lodash'
+    "esModuleInterop": true,
+    // This is what Jest wants us to use.
+    "module": "commonjs",
+    // Do not emit files.
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // Skip type checking of declaration files.
+    "skipLibCheck": true,
+    // Applies strict TS rules.
+    "strict": true,
+    // Because we are running Node12 we want to use this target.
+    // https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping#node-12
+    "target": "ES2019"
+  },
+  // Don't process these files/dirs.
+  "exclude": ["coverage", "dist", "node_modules"],
+  // Include these files.
+  "include": ["."]
+}
