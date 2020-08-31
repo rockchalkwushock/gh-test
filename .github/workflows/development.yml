@@ -23,7 +23,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -33,7 +34,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn lint
+      - name: Run linter
+        run: yarn lint
 
   type-check:
     name: TypeScript
@@ -43,7 +45,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -53,7 +56,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn type-check
+      - name: Run type checking
+        run: yarn type-check
 
   test:
     name: Jest
@@ -64,7 +68,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -74,8 +79,9 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn test --ci
-      
+      - name: Run test suite
+        run: yarn test --ci
+
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -85,7 +91,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -95,6 +102,5 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn build
-
-
+      - name: Run build
+        run: yarn build
