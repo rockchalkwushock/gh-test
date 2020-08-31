@@ -8,6 +8,9 @@
   "repository": "https://github.com/rockchalkwushock/gh-test.git",
   "author": "Cody Brunner <rockchalkwushock@icloud.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "yarn clean && concurrently npm:build-*",
     "build-cjs": "NODE_ENV=production rollup --config --environment FORMAT:cjs",
@@ -17,7 +20,7 @@
     "commit": "git cz",
     "format": "prettier --write",
     "lint": "eslint",
-    "release": "standard-version",
+    "release": "standard-version --no-verify",
     "start": "yarn clean && NODE_ENV=development yarn rollup -c --watch",
     "test": "jest",
     "type-check": "tsc"
