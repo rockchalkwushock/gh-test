@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+    // We don't want to allow JS files to be imported
+    // since we are writing exclusively in TS.
+    "allowJs": false,
+    // Allows us to do the following:
+    // import * as React from 'react'
+    // import _ from 'lodash'
+    "esModuleInterop": true,
+    // This is what Rollup wants us to use.
+    "module": "esnext",
+    // Do not emit files.
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // Applies strict TS rules.
+    "strict": true,
+    // This is what Rollup wants us to use.
+    "target": "esnext",
+    // We only need to look at 'node' typings.
+    "types": ["node"]
+  },
+  // Don't process these files/dirs.
+  "exclude": ["coverage", "dist", "node_modules", "src/**/*.test.ts"],
+  // Include these files.
+  "include": ["."]
+}
