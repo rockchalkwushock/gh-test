@@ -23,7 +23,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -33,7 +34,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn lint
+      - name: Run linter
+        run: yarn lint
 
   type-check:
     name: TypeScript
@@ -43,7 +45,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -53,7 +56,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn type-check
+      - name: Run type checking
+        run: yarn type-check
 
   test-and-coverage:
     name: Jest
@@ -64,7 +68,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -74,12 +79,13 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn test --coverage --ci
+      - name: Run test suite & generate coverage
+        run: yarn test --coverage --ci
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-  
+
   release:
     name: Bump version, Generate Changelog, Publish to NPM
     runs-on: ubuntu-latest
@@ -89,7 +95,8 @@ jobs:
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Load Yarn cache
         uses: actions/cache@v2
         with:
@@ -100,9 +107,9 @@ jobs:
       - name: Installing dependencies
         run: yarn --frozen-lockfile
       - name: Standard Version
-      - run: yarn release
+        run: yarn release
       - name: Publish to npm
         uses: pascalgn/npm-publish-action@1.3.3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
