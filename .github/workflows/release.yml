@@ -107,7 +107,7 @@ jobs:
       - name: Installing dependencies
         run: yarn --frozen-lockfile
       - name: Standard Version
-        run: yarn release
+        run: yarn release --sign
       - name: Publish to npm
         uses: pascalgn/npm-publish-action@1.3.3
         env:
