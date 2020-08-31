@@ -55,7 +55,7 @@ jobs:
         run: yarn --frozen-lockfile
       - run: yarn type-check
 
-  test:
+  test-and-coverage:
     name: Jest
     runs-on: ubuntu-latest
     timeout-minutes: 2
@@ -74,34 +74,17 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - run: yarn test --ci
-      
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    timeout-minutes: 2
-    needs: [test]
-    steps:
-      - name: Get Yarn cache path
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/checkout@v2
-      - name: Load Yarn cache
-        uses: actions/cache@v2
+      - run: yarn test --coverage --ci
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Installing dependencies
-        run: yarn --frozen-lockfile
-      - run: yarn build
+          token: ${{ secrets.CODECOV_TOKEN }}
   
   release:
     name: Bump version, Generate Changelog, Publish to NPM
     runs-on: ubuntu-latest
     timeout-minutes: 2
-    needs: [test]
+    needs: [test-and-coverage]
     steps:
       - name: Get Yarn cache path
         id: yarn-cache
