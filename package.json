@@ -6,12 +6,19 @@
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "types": "dist/types/index.d.ts",
-  "repository": "https://github.com/rockchalkwushock/gh-test.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rockchalkwushock/gh-test.git"
+  },
   "author": "Cody Brunner <rockchalkwushock@icloud.com>",
   "license": "MIT",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "yarn clean && concurrently npm:build-*",
     "build-cjs": "NODE_ENV=production rollup --config --environment FORMAT:cjs",
