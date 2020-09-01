@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.12](https://github.com/rockchalkwushock/gh-test/compare/v1.1.11...v1.1.12) (2020-09-01)
+
+
+### Bug Fixes
+
+* **root:** adds .npmrc ([1901416](https://github.com/rockchalkwushock/gh-test/commit/1901416ae775120edcc57cbad79055245148889c))
+
+
+### Chores
+
+* **workflows:** adds --verbose flag to check output ([e168054](https://github.com/rockchalkwushock/gh-test/commit/e168054e7b0f66b1fcd84ee360650bc65ff6886d))
+
 ### [1.1.11](https://github.com/rockchalkwushock/gh-test/compare/v1.1.10...v1.1.11) (2020-09-01)
 
 ### [1.1.10](https://github.com/rockchalkwushock/gh-test/compare/v1.1.9...v1.1.10) (2020-09-01)
