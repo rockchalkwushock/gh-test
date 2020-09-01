@@ -1,6 +1,6 @@
 {
   "name": "gh-test",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Testing out GitHub Actions + GitHub Packages",
   "browser": "dist/bundle.umd.min.js",
   "main": "dist/cjs/index.js",
