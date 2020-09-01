@@ -12,10 +12,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "build": "yarn clean && concurrently npm:build-*",
     "build-cjs": "NODE_ENV=production rollup --config --environment FORMAT:cjs",
