@@ -53,6 +53,6 @@ jobs:
           release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
           tag_name: ${{ steps.publish_tag.outputs.tag_name }}
       - name: Publish to GitHub Packages
-        run: yarn publish
+        run: yarn publish --verbose
         env:
           NPM_AUTH_TOKEN: ${{ github.token }}
