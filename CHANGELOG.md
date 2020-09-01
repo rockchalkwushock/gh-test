@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/rockchalkwushock/gh-test/compare/v1.1.17-a...v1.2.0) (2020-09-01)
+
+
+### Features
+
+* **root:** fuck it see if it works ([e66b7c5](https://github.com/rockchalkwushock/gh-test/commit/e66b7c51d93795cbb9ce8e7df8f04e8ba3452f6d))
+
+
+### Bug Fixes
+
+* **workflows:** fml sideways ([3fa9669](https://github.com/rockchalkwushock/gh-test/commit/3fa9669d01b3fad93235d5b6d65d1444d34f91d4))
+
 ### [1.1.16](https://github.com/rockchalkwushock/gh-test/compare/v1.1.15...v1.1.16) (2020-09-01)
 
 
