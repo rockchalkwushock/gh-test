@@ -110,7 +110,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing dependencies
         run: yarn --frozen-lockfile
-      - name: Standard Version
+      - name: Generate tag and Changelog
         # I'd like to find a way to make this dynamic.
         # Have not found any system vars to access from
         # GitHub Actions so I might have to hack something
@@ -119,6 +119,14 @@ jobs:
           git config user.name Cody Brunner
           git config user.email rockchalkwushock@icloud.com
           yarn release
+      - name: Publish tag
+        run: |
+          git push --follow-tags
+          echo ::set-output name=tage_name::$(git describe HEAD --abbrev=0)
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to npm
         uses: pascalgn/npm-publish-action@1.3.3
         env:
