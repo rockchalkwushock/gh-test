@@ -1,5 +1,5 @@
 {
-  "name": "@rockchalkwushock/gh-test",
+  "name": "gh-test",
   "version": "1.1.16",
   "description": "Testing out GitHub Actions + GitHub Packages",
   "browser": "dist/bundle.umd.min.js",
@@ -15,10 +15,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
-  },
   "keywords": [
     "github actions",
     "github packages"
