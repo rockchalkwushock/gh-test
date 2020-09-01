@@ -1,5 +1,5 @@
 {
-  "name": "gh-test",
+  "name": "@rockchalkwushock/gh-test",
   "version": "1.1.12",
   "description": "Testing out GitHub Actions + GitHub Packages",
   "browser": "dist/bundle.umd.min.js",
