@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/rockchalkwushock/gh-test/compare/v1.1.0...v1.1.1) (2020-09-01)
+
+
+### Bug Fixes
+
+* **workflows:** adds missing inputs ([3027434](https://github.com/rockchalkwushock/gh-test/commit/30274346f8a55dd5eb379f02ed9def1d199084c2))
+
 ## 1.1.0 (2020-09-01)
 
 
