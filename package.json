@@ -19,6 +19,10 @@
     "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
+  "keywords": [
+    "github actions",
+    "github packages"
+  ],
   "scripts": {
     "build": "yarn clean && concurrently npm:build-*",
     "build-cjs": "NODE_ENV=production rollup --config --environment FORMAT:cjs",
