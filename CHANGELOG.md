@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.14](https://github.com/rockchalkwushock/gh-test/compare/v1.1.13...v1.1.14) (2020-09-01)
+
+
+### Bug Fixes
+
+* **root:** fixes the merge conflict ([48ee82c](https://github.com/rockchalkwushock/gh-test/commit/48ee82c986d8881d81aa877025d81e9e2cbed9f9))
+* **root:** if this was the bug FML ([d387b1a](https://github.com/rockchalkwushock/gh-test/commit/d387b1ac547979672f5b0df01dcebda31cc04143))
+
 ### [1.1.13](https://github.com/rockchalkwushock/gh-test/compare/v1.1.12...v1.1.13) (2020-09-01)
 
 ### [1.1.12](https://github.com/rockchalkwushock/gh-test/compare/v1.1.11...v1.1.12) (2020-09-01)
