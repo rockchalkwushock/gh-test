@@ -14,7 +14,7 @@
   ],
   "publishConfig": {
     "access": "public",
-    "registry": "@rockchalkwushock:registry=https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/rockchalkwushock"
   },
   "scripts": {
     "build": "yarn clean && concurrently npm:build-*",
