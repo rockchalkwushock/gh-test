@@ -59,9 +59,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ github.token }}
       - name: Publish to Yarn Registry
         uses: actions/setup-node@v1
-          with:
-            registry-url: https://npm.pkg.github.com
-            scope: "@rockchalkwushock"
+        with:
+          registry-url: https://npm.pkg.github.com
+          scope: "@rockchalkwushock"
         run: yarn publish --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
