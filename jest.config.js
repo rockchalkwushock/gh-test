@@ -1,6 +1,6 @@
 module.exports = {
   bail: true,
-  collectCoverageFrom: ['./src'],
+  collectCoverageFrom: ['./src/**/*.ts'],
   globals: {
     'ts-jest': {
       tsConfig: 'tsconfig.test.json',
