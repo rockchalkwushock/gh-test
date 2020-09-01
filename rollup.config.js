@@ -55,7 +55,7 @@ export default {
       tsconfigOverride: {
         compilerOptions: {
           declaration: true,
-          declarationDir: 'dist/types',
+          declarationDir: 'dist',
           noEmit: false,
         },
       },

@@ -3,9 +3,9 @@
   "version": "1.3.0",
   "description": "Testing out GitHub Actions + GitHub Packages",
   "browser": "dist/bundle.umd.min.js",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/es.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/rockchalkwushock/gh-test.git"
