@@ -13,8 +13,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-          registry-url: "@rockchalkwushock:registry=https://npm.pkg.github.com/"
+          node-version: 12
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -52,6 +51,17 @@ jobs:
           release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
           tag_name: ${{ steps.publish_tag.outputs.tag_name }}
       - name: Publish to GitHub Packages
+        uses: actions/setup-node@v1
+        with:
+          registry-url: https://npm.pkg.github.com
         run: yarn publish --verbose
         env:
-          NPM_AUTH_TOKEN: ${{ github.token }}
+          NODE_AUTH_TOKEN: ${{ github.token }}
+      - name: Publish to Yarn Registry
+        uses: actions/setup-node@v1
+          with:
+            registry-url: https://npm.pkg.github.com
+            scope: "@rockchalkwushock"
+        run: yarn publish --verbose
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
