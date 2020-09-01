@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.16](https://github.com/rockchalkwushock/gh-test/compare/v1.1.15...v1.1.16) (2020-09-01)
+
+
+### Bug Fixes
+
+* **workflows:** *exhausted exhale* ([f8d47ce](https://github.com/rockchalkwushock/gh-test/commit/f8d47ced973e9cde6cee1e6dcb3334673a25704e))
+* **workflows:** fixes indentation bug in yaml file ([1e623e9](https://github.com/rockchalkwushock/gh-test/commit/1e623e99adfaa401198fd9d6d8dd61402632d7bc))
+* **workflows:** more bugs ([abea06b](https://github.com/rockchalkwushock/gh-test/commit/abea06bedfb2089159ce5325b90286600f6cde5e))
+
 ### [1.1.15](https://github.com/rockchalkwushock/gh-test/compare/v1.1.14...v1.1.15) (2020-09-01)
 
 
