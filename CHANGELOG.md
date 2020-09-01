@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/rockchalkwushock/gh-test/compare/v1.2.0...v1.3.0) (2020-09-01)
+
+
+### Features
+
+* **root:** not doing GPR anymore fuck it! ([f9ff015](https://github.com/rockchalkwushock/gh-test/commit/f9ff015a6b3023b08dbc92645a46314780b5bf0b))
+
+
+### Chores
+
+* **root:** fixes up the merge conflict ([fd078aa](https://github.com/rockchalkwushock/gh-test/commit/fd078aa52f3bce03f79ba13150ddb1436f45fd11))
+
 ## [1.2.0](https://github.com/rockchalkwushock/gh-test/compare/v1.1.17-a...v1.2.0) (2020-09-01)
 
 
