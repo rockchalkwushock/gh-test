@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/rockchalkwushock/gh-test/compare/v1.1.4...v1.1.5) (2020-09-01)
+
+
+### Chores
+
+* **root:** adds publishConfig to package.json ([f8aa63e](https://github.com/rockchalkwushock/gh-test/commit/f8aa63e2c7a6f51dfef62cf3182d357a1762b3e1))
+
 ### [1.1.4](https://github.com/rockchalkwushock/gh-test/compare/v1.1.3...v1.1.4) (2020-09-01)
 
 ### [1.1.3](https://github.com/rockchalkwushock/gh-test/compare/v1.1.2...v1.1.3) (2020-09-01)
