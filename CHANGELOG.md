@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.17](https://github.com/rockchalkwushock/gh-test/compare/v1.1.16...v1.1.17) (2020-09-01)
+
+
+### Bug Fixes
+
+* **workflows:** more tom-fuckery ([76fed0d](https://github.com/rockchalkwushock/gh-test/commit/76fed0d5e05137fff0de53ffe4a43098724ef489))
+
 ### [1.1.16](https://github.com/rockchalkwushock/gh-test/compare/v1.1.15...v1.1.16) (2020-09-01)
 
 
