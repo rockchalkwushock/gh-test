@@ -14,13 +14,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-
-  release-and-publish:
-    name: Release & Publish
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    needs: [setup-environment]
-    steps:
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@rockchalkwushock"
       - name: Get Yarn cache path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -58,6 +53,6 @@ jobs:
           release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
           tag_name: ${{ steps.publish_tag.outputs.tag_name }}
       - name: Publish to GitHub Packages
-        run: npm publish
+        run: yarn publish
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ github.token }}
